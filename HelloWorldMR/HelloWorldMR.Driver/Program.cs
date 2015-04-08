@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using HelloWorldMR.Mapper;
 using HelloWorldMR.Reducer;
 using HelloWorldMR.Job;
+using HelloWorldMR.Interfaces;
+using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity.Configuration;
 
 namespace HelloWorldMR.Driver
 {
@@ -14,9 +17,9 @@ namespace HelloWorldMR.Driver
     {
         static void Main(string[] args)
         {
-            IHadoop hadoop = Hadoop.Connect();
-            hadoop.MapReduceJob.ExecuteJob<HelloWorldJob>();
-            Console.Read();
+            var driver = DependencyInjectionResolver.Resolve<IDriver>();
+            driver.Run();
+
         }
     }
 }

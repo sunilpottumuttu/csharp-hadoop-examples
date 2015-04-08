@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMR.Mapper", "HelloWorldMR.Mapper\HelloWorldMR.Mapper.csproj", "{811879F4-48F4-4DFE-9C53-85E37C602AB0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMR.Reducer", "HelloWorldMR.Reducer\HelloWorldMR.Reducer.csproj", "{B1673973-7C77-4568-98A4-F63541F582B0}"
@@ -12,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMR.Job", "HelloWorldMR.Job\HelloWorldMR.Job.csproj", "{B735C3A6-F0D3-4CD7-B790-AC14DA54344E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMR.UnitTests", "HelloWorldMR.UnitTests\HelloWorldMR.UnitTests.csproj", "{6B4754B8-3209-46BE-89B7-4BFF6527E91B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMR.Interfaces", "HelloWorldMR.Interfaces\HelloWorldMR.Interfaces.csproj", "{CE6FD8FB-DD8D-40FB-A93C-DF960EF57541}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +39,10 @@ Global
 		{6B4754B8-3209-46BE-89B7-4BFF6527E91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B4754B8-3209-46BE-89B7-4BFF6527E91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B4754B8-3209-46BE-89B7-4BFF6527E91B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE6FD8FB-DD8D-40FB-A93C-DF960EF57541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE6FD8FB-DD8D-40FB-A93C-DF960EF57541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE6FD8FB-DD8D-40FB-A93C-DF960EF57541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE6FD8FB-DD8D-40FB-A93C-DF960EF57541}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

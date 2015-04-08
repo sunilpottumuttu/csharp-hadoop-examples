@@ -41,6 +41,15 @@
     <Reference Include="Microsoft.Hadoop.WebClient">
       <HintPath>..\packages\Microsoft.Hadoop.MapReduce.0.12.5547.19212\lib\net40\Microsoft.Hadoop.WebClient.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.WindowsAzure.Management.Framework">
       <HintPath>..\packages\Microsoft.Hadoop.MapReduce.0.12.5547.19212\lib\net40\Microsoft.WindowsAzure.Management.Framework.dll</HintPath>
     </Reference>
@@ -48,6 +57,7 @@
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,6 +66,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyInjectionResolver.cs" />
+    <Compile Include="HDFSDriver.cs" />
+    <Compile Include="LocalFSDriver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -87,6 +100,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HelloWorldMR.Interfaces\HelloWorldMR.Interfaces.csproj">
+      <Project>{ce6fd8fb-dd8d-40fb-a93c-df960ef57541}</Project>
+      <Name>HelloWorldMR.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HelloWorldMR.Job\HelloWorldMR.Job.csproj">
       <Project>{b735c3a6-f0d3-4cd7-b790-ac14da54344e}</Project>
       <Name>HelloWorldMR.Job</Name>

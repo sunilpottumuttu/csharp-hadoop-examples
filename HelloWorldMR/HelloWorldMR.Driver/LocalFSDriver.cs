@@ -1,17 +1,19 @@
-﻿using HelloWorldMR.Mapper;
-using HelloWorldMR.Reducer;
-using Microsoft.Hadoop.MapReduce;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HelloWorldMR.Mapper;
+using HelloWorldMR.Reducer;
+using HelloWorldMR.Job;
+using Microsoft.Hadoop.MapReduce;
+using HelloWorldMR.Interfaces;
 
-namespace HelloWorldMR.UnitTests
+namespace HelloWorldMR.Driver
 {
-    class Program
+    public class LocalFSDriver:IDriver
     {
-        static void Main(string[] args)
+        public void Run()
         {
             var inputArray = new[]
             {
@@ -22,7 +24,7 @@ namespace HelloWorldMR.UnitTests
                 "Hello, chickenface",
                 "Hello, Andy"
             };
-            var output = StreamingUnit.Execute<HelloWorldMapper,HelloWorldReducer>(inputArray);
+            var output = StreamingUnit.Execute<HelloWorldMapper, HelloWorldReducer>(inputArray);
 
             Console.WriteLine("Map");
             foreach (var mapperResult in output.MapperResult)
